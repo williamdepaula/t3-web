@@ -1,18 +1,11 @@
 {
-    "produtos" : [
-        {
-           "id": 1,
-           "nome": "Produto 1",
-           "descricao": "Descrição do produto 1",
-           "preco": 230.99,
-           "quatidade_estoque": 12
-        },
-        {
-           "id": 2,
-           "nome": "Produto 2",
-           "descricao": "Descrição do produto 2",
-           "preco": 30.99,
-           "quatidade_estoque": 3
-        }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "title": "hello"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }
