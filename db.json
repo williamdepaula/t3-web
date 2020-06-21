@@ -5,7 +5,6 @@
        "descricao": "Descrição do produto 1",
        "preco": 230.99,
        "quatidade_estoque": 12,
-       "url_imagem": "https://placeimg.com/200/100"
     },
     {
        "id": 2,
@@ -13,7 +12,6 @@
        "descricao": "Descrição do produto 2",
        "preco": 30.99,
        "quatidade_estoque": 3,
-       "url_imagem": "https://placeimg.com/200/100"
     },
     {
        "id": 3,
@@ -21,7 +19,6 @@
        "descricao": "Descrição do produto 3",
        "preco": 23.99,
        "quatidade_estoque": 5,
-       "url_imagem": "https://placeimg.com/200/100"
     },
     {
        "id": 4,
@@ -29,7 +26,6 @@
        "descricao": "Descrição do produto 4",
        "preco": 13.5,
        "quatidade_estoque": 17,
-       "url_imagem": "https://placeimg.com/200/100"
     },
     {
        "id": 5,
@@ -37,7 +33,6 @@
        "descricao": "Descrição do produto 5",
        "preco": 50,
        "quatidade_estoque": 12,
-       "url_imagem": "https://placeimg.com/200/100"
     },
     {
        "id": 6,
@@ -45,15 +40,6 @@
        "descricao": "Descrição do produto 6",
        "preco": 230.99,
        "quatidade_estoque": 12,
-       "url_imagem": "https://placeimg.com/200/100"
-    },
-    {
-       "id": 7,
-       "nome": "Produto 7",
-       "descricao": "Descrição do produto 7",
-       "preco": 230.99,
-       "quatidade_estoque": 12,
-       "url_imagem": "https://placeimg.com/200/100"
     }
  ]
  
