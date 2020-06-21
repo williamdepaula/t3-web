@@ -1,8 +1,11 @@
 {
-  "posts": [
+  "produtos": [
     {
       "id": 1,
-      "title": "hello"
+      "nome": "Produto 1",
+      "descricao": "Descrição do produto 1",
+      "preco": 230.99,
+      "quatidade_estoque": 12
     }
   ],
   "profile": {
