@@ -1,5 +1,5 @@
 [
-    "produtos": [
+    "produtos" : [
         {
            "id": 1,
            "nome": "Produto 1",
