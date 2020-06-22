@@ -8,7 +8,7 @@
             {{produto.descricao}}
         </p>
         <p class="preco">
-            R$ {{produto.preco}}
+            R$ {{precoProduto}}
         </p>
         <div class="botao" @click="adicionarNoCarrinho">add carrinho</div>
         <div class="vejamais" @click="vejaMaisProduto()">Saiba mais</div>
@@ -35,6 +35,11 @@ export default {
         vejaMaisProduto() {
           eventBus.$emit('vejaMaisProduto', this.produto)
         }
+    },
+    computed: {
+      precoProduto() {
+        return parseFloat(this.produto.preco).toFixed(2).replace('.', ',')
+      }
     }
 }
 </script>

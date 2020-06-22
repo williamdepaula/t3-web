@@ -12,14 +12,14 @@
               {{produto.nome}}
             </h3>
             <p class="preco">
-              R$ {{produto.preco}}
+              R$ {{formataPreco(produto.preco)}}
             </p>
             <p class="quantidade">
               Quantidade: 
-              <span>{{produto.quatidade_estoque}}</span>
+              <span>{{produto.quantidade}}</span>
             </p>
           </div>
-          <div class="remover">
+          <div class="remover" @click="removerItemCarrinho(produto.id)" >
             <i class="material-icons">
               delete
             </i>
@@ -30,7 +30,7 @@
       <div class="total-carrinho">
         <h3>Total</h3>
         <p>
-          R$ 2599,99
+          R$ {{totalCarrinho}}
         </p>
         <div class="botao">Comprar</div>
       </div> <!-- /total-carrinho -->
@@ -64,7 +64,25 @@ export default {
             carrinho: []
         }
     },
+    computed: {
+      totalCarrinho() {
+        let total = 0.0
+        this.carrinhoDeCompras.forEach( item => {
+          total += item.preco * item.quantidade
+        })
+        return parseFloat(total).toFixed(2).replace('.', ',')
+      }
+    },
     methods: {
+        removerItemCarrinho(id) {
+          this.carrinho.forEach( (item, index) => {
+            if (item.id === id) {
+              this.carrinho.splice(index, 1)
+            }
+          })
+
+          this.buscaProdutosCarrinho()
+        },
         fecharVejaMaisCarrinhoBtn() {
             this.vejaMaisCarrinho = false
         },
@@ -88,38 +106,35 @@ export default {
 
             Promise.all(produtoPromises)
                 .then(produtos => {
-                    console.log("Produto: ", produtos)
                     this.produtos = produtos
                     this.organizaCarrinho()
-                })
-            
+                })     
         },
         buscaQuatidadeDesejada(idItem) {
-            console.log("idItem:", idItem)
+            let qtd = 0
             this.carrinho.forEach( item => {
                 if (idItem === item.id) {
-                    console.log("Item", item)
-                    return item.quantidade
+                    qtd = item.quantidade
                 }
             })
-            return 0
+            return qtd
         },
         organizaCarrinho() {
-            console.log("Organiza: ", this.produtos)
             this.carrinhoDeCompras = []
             this.produtos.forEach( item => {
-                let qtd = this.buscaQuatidadeDesejada(item.id)
-                console.log("Qtd: ", qtd)
                 let prod = {
                     id: item.id,
                     descricao: item.descricao,
                     nome: item.nome,
                     preco: item.preco,
-                    quantidade: qtd
+                    quantidade: this.buscaQuatidadeDesejada(item.id)
                 }
                 this.carrinhoDeCompras.push(prod)
             })
-        }
+        },
+        formataPreco(preco) {
+        return parseFloat(preco).toFixed(2).replace('.', ',')
+      }
     }
 }
 </script>

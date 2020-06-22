@@ -7,7 +7,7 @@
     </div>
 
     <veja-mais-produto/>
-
+    
     <lista-carrinho-de-compras />
     
   </div>
