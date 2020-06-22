@@ -2,279 +2,31 @@
   <div id="app">
 
     <div class="container">
-      <div class="carrinho" @click="vejaMaisCarrinhoBtn">
-        <i class="material-icons">
-          shopping_cart
-        </i>
-        <span class='badge badge-warning' id='lblCartCount'> 5 </span>
-        Carrinho
-      </div>
+     <carrinho-de-compra/>
      <lista-produtos></lista-produtos>
     </div>
 
-    <div class="vejaMaisContainer" v-bind:class="{ inativo: !vejaMais}">
-      <div class="close" @click="fecharVejaMaisBtn"></div>
-      <h2 class="header">
-        Nome do produto
-      </h2>
-      <p class="descricao">
-        Nullam posuere turpis vel lacinia luctus. Nullam posuere turpis vel lacinia luctus. Nullam posuere turpis vel lacinia luctus.Nullam posuere turpis vel lacinia luctus.Nullam posuere turpis vel lacinia luctus.
-      </p>
-      <img src='https://placeimg.com/100/100'>
-    </div>
+    <veja-mais-produto/>
 
-    <div class="vejaMaisCarrinho" v-bind:class="{ inativo: !vejaMaisCarrinho}">
-      <div class="close" @click="fecharVejaMaisCarrinhoBtn"></div>
-      <div class="lista-carrinho">
-
-         <div class="produto-carrinho">
-          <div class="imagem">
-            <img src='https://placeimg.com/100/50'>
-          </div>
-          <div class="infos">
-            <h3 class="header">
-              Nome do produto
-            </h3>
-            <p class="preco">
-              R$ 230,99
-            </p>
-            <p class="quantidade">
-              Quantidade: 
-              <span>2</span>
-            </p>
-          </div>
-          <div class="remover">
-            <i class="material-icons">
-              delete
-            </i>
-          </div>
-        </div>
-
-        <div class="produto-carrinho">
-          <div class="imagem">
-            <img src='https://placeimg.com/100/50'>
-          </div>
-          <div class="infos">
-            <h3 class="header">
-              Nome do produto
-            </h3>
-            <p class="preco">
-              R$ 230,99
-            </p>
-            <p class="quantidade">
-              Quantidade: 
-              <span>2</span>
-            </p>
-          </div>
-          <div class="remover">
-            <i class="material-icons">
-              delete
-            </i>
-          </div>
-        </div>
-
-        <div class="produto-carrinho">
-          <div class="imagem">
-            <img src='https://placeimg.com/100/50'>
-          </div>
-          <div class="infos">
-            <h3 class="header">
-              Nome do produto
-            </h3>
-            <p class="preco">
-              R$ 230,99
-            </p>
-            <p class="quantidade">
-              Quantidade: 
-              <span>2</span>
-            </p>
-          </div>
-          <div class="remover">
-            <i class="material-icons">
-              delete
-            </i>
-          </div>
-        </div>
-
-        <div class="produto-carrinho">
-          <div class="imagem">
-            <img src='https://placeimg.com/100/50'>
-          </div>
-          <div class="infos">
-            <h3 class="header">
-              Nome do produto
-            </h3>
-            <p class="preco">
-              R$ 230,99
-            </p>
-            <p class="quantidade">
-              Quantidade: 
-              <span>2</span>
-            </p>
-          </div>
-          <div class="remover">
-            <i class="material-icons">
-              delete
-            </i>
-          </div>
-        </div>
-
-        <div class="produto-carrinho">
-          <div class="imagem">
-            <img src='https://placeimg.com/100/50'>
-          </div>
-          <div class="infos">
-            <h3 class="header">
-              Nome do produto
-            </h3>
-            <p class="preco">
-              R$ 230,99
-            </p>
-            <p class="quantidade">
-              Quantidade: 
-              <span>2</span>
-            </p>
-          </div>
-          <div class="remover">
-            <i class="material-icons">
-              delete
-            </i>
-          </div>
-        </div>
-
-        <div class="produto-carrinho">
-          <div class="imagem">
-            <img src='https://placeimg.com/100/50'>
-          </div>
-          <div class="infos">
-            <h3 class="header">
-              Nome do produto
-            </h3>
-            <p class="preco">
-              R$ 230,99
-            </p>
-            <p class="quantidade">
-              Quantidade: 
-              <span>2</span>
-            </p>
-          </div>
-          <div class="remover">
-            <i class="material-icons">
-              delete
-            </i>
-          </div>
-        </div>
-
-        <div class="produto-carrinho">
-          <div class="imagem">
-            <img src='https://placeimg.com/100/50'>
-          </div>
-          <div class="infos">
-            <h3 class="header">
-              Nome do produto
-            </h3>
-            <p class="preco">
-              R$ 230,99
-            </p>
-            <p class="quantidade">
-              Quantidade: 
-              <span>2</span>
-            </p>
-          </div>
-          <div class="remover">
-            <i class="material-icons">
-              delete
-            </i>
-          </div>
-        </div>
-
-        <div class="produto-carrinho">
-          <div class="imagem">
-            <img src='https://placeimg.com/100/50'>
-          </div>
-          <div class="infos">
-            <h3 class="header">
-              Nome do produto
-            </h3>
-            <p class="preco">
-              R$ 230,99
-            </p>
-            <p class="quantidade">
-              Quantidade: 
-              <span>2</span>
-            </p>
-          </div>
-          <div class="remover">
-            <i class="material-icons">
-              delete
-            </i>
-          </div>
-        </div>
-
-        <div class="produto-carrinho">
-          <div class="imagem">
-            <img src='https://placeimg.com/100/50'>
-          </div>
-          <div class="infos">
-            <h3 class="header">
-              Nome do produto
-            </h3>
-            <p class="preco">
-              R$ 230,99
-            </p>
-            <p class="quantidade">
-              Quantidade: 
-              <span>2</span>
-            </p>
-          </div>
-          <div class="remover">
-            <i class="material-icons">
-              delete
-            </i>
-          </div>
-        </div>
-
-      </div> <!-- /lista-carrinho -->
-      <div class="total-carrinho">
-        <h3>Total</h3>
-        <p>
-          R$ 2599,99
-        </p>
-        <div class="botao">Comprar</div>
-      </div> <!-- /total-carrinho -->
-      
-    </div>
+    <lista-carrinho-de-compras />
+    
   </div>
 </template>
 
 <script>
 
 import listaProdutos from './components/listaProdutos.vue'
+import carrinhoDeCompra from './components/carrinhoDeCompra.vue'
+import vejaMaisProduto from './components/vejaMaisProduto.vue'
+import listaCarrinhoDeCompras from './components/listaCarrinhoDeCompras.vue'
 
 export default {
   name: 'App',
   components: {
-    listaProdutos
-  },
-  data() {
-    return {
-      vejaMais: false,
-      vejaMaisCarrinho: false
-    }
-  },
-  methods: {
-    vejaMaisBtn() {
-      this.vejaMais = !this.vejaMais
-    },
-    fecharVejaMaisBtn() {
-      this.vejaMais = false
-    },
-     vejaMaisCarrinhoBtn() {
-      this.vejaMaisCarrinho = !this.vejaMaisCarrinho
-    },
-    fecharVejaMaisCarrinhoBtn() {
-      this.vejaMaisCarrinho = false
-    }
+    listaProdutos,
+    carrinhoDeCompra,
+    vejaMaisProduto,
+    listaCarrinhoDeCompras
   }
 }
 </script>
@@ -298,36 +50,7 @@ export default {
 
   .container {
     padding 20px
-    text-align center
-
-    .carrinho {
-      color #fff
-      text-align left  
-      cursor pointer
-
-      .badge {
-        padding-left 9px
-        padding-right 9px
-        -webkit-border-radius 9px
-        -moz-border-radius 9px
-        border-radius 9px
-      }
-
-      .label-warning[href],
-      .badge-warning[href] {
-        background-color #c67605
-      }
-      #lblCartCount {
-          font-size 12px
-          background #ff0000
-          color #fff
-          padding 0 5px
-          vertical-align top
-          margin-left -10px
-      }
-    }
-
-    
+    text-align center    
   }
 
   .vejaMaisContainer {
